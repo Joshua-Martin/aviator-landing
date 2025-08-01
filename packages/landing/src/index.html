@@ -170,6 +170,9 @@
   <body
     class="flex flex-col items-center justify-center overflow-y-auto bg-blue-50 w-full max-w-full"
   >
+  <header>
+    <div id="nav-root"></div>
+  </header>
     <div id="geo-root"></div>
     <div class="w-screen" id="banner-root"></div>
     <div
@@ -229,46 +232,214 @@
         <div
           class="absolute inset-0 h-full w-full z-10 pointer-events-none hidden md:flex flex-col items-center justify-center"
         >
-          <!-- Plug layer (transparent, holds the plug image) -->
-          <div class="relative w-screen h-0">
-            <img
-              src="./assets/hose-right.png"
-              alt="Plug graphic right"
-              class="hidden lgPlus:block absolute bottom-0 right-0 z-20 md:w-[15rem] lg:w-[16rem] lgPlus:w-[16rem] xl:w-[18rem] xlPlus:w-[19rem] 2xl:w-[20rem] min-w-[16rem] max-w-[20rem] pointer-events-none select-none"
-              style="object-fit: contain"
-              aria-hidden="true"
-            />
-            <img
-              src="./assets/hose-left.png"
-              alt="Plug graphic left"
-              class="hidden lgPlus:block absolute bottom-0 left-0 z-20 md:w-[15rem] lg:w-[16rem] lgPlus:w-[16rem] xl:w-[18rem] xlPlus:w-[19rem] 2xl:w-[20rem] min-w-[16rem] max-w-[20rem] pointer-events-none select-none"
-              style="object-fit: contain"
-              aria-hidden="true"
-            />
+                <!-- Plug layer (transparent, holds the plug image) -->
+                <div class="relative w-screen h-0">
+                  <img
+                    src="./assets/hose-right.png"
+                    alt="Plug graphic right"
+                    class="hidden lgPlus:block absolute bottom-0 right-0 z-20 md:w-[15rem] lg:w-[16rem] lgPlus:w-[16rem] xl:w-[18rem] xlPlus:w-[19rem] 2xl:w-[20rem] min-w-[16rem] max-w-[20rem] pointer-events-none select-none"
+                    style="object-fit: contain"
+                    aria-hidden="true"
+                  />
+                  <img
+                    src="./assets/hose-left.png"
+                    alt="Plug graphic left"
+                    class="hidden lgPlus:block absolute bottom-0 left-0 z-20 md:w-[15rem] lg:w-[16rem] lgPlus:w-[16rem] xl:w-[18rem] xlPlus:w-[19rem] 2xl:w-[20rem] min-w-[16rem] max-w-[20rem] pointer-events-none select-none"
+                    style="object-fit: contain"
+                    aria-hidden="true"
+                  />
+                </div>
+                <!-- Stacked white layers -->
+                <!-- Step 1: bottom shadow -->
+                <div
+                  class="w-screen bg-white border-t border-gray-200 h-[10vh]"
+                ></div>
+                <!-- Step 2: bottom shadow -->
+                <div
+                  class="w-screen bg-white border-t border-gray-200 h-[10vh] step-shadow-top"
+                ></div>
+                <!-- Step 3: top shadow -->
+                <div
+                  class="w-screen bg-white border-t border-gray-200 h-[10vh] step-shadow-top"
+                ></div>
+                <!-- Step 4: top shadow -->
+                <div
+                  class="w-screen bg-white border-t border-gray-200 h-[10vh] step-shadow-top"
+                ></div>
+                <div
+                  class="w-screen bg-white border-y border-gray-200 h-[10vh] step-shadow-top"
+                ></div>
+              </div>
+            </div>
+    </section>
+
+    <!-- ================= Aviator Key Features Section =================
+      Clean, modern design with header, tags, and consistent styling.
+      Each row is 50vh with consistent colors and gradient highlights.
+      Last updated: 2025-07-31
+    -->
+    <section class="w-full py-16 px-4 bg-gradient-to-b from-gray-50 to-white relative">
+      <!-- Background SVG -->
+      <div class="absolute inset-0 h-full w-full z-0">
+        <img src="./assets/dev-assets/verticle_sunrise_wave.svg" alt="" class="w-full h-full object-cover opacity-30" />
+      </div>
+      <!-- Header Section -->
+      <div class="text-center mb-16 max-w-4xl mx-auto relative z-10">
+        <div class="inline-block bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text text-sm font-semibold tracking-wide uppercase mb-4">
+          Explore the features
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          Transform Your Sales Process
+        </h2>
+        <p class="text-xl text-gray-600 leading-relaxed">
+          Aviator combines AI avatars, smart integrations, and proven results into a powerful, 
+          seamless experience that revolutionizes how you demo and sell your product.
+        </p>
+      </div>
+
+      <div class="flex flex-col max-w-6xl mx-auto relative z-10">
+        <!-- Row 1: Interactive Demos -->
+        <div class="flex flex-col md:flex-row h-[50vh] gap-4 mb-4">
+          <!-- Left Column -->
+          <div class="flex-1 bg-gray-50 rounded-md p-8 flex flex-col justify-center relative overflow-hidden">
+  <!-- SVG wave background can be re-added here with a background-image style if desired -->
+            <div class="relative z-10">
+              <div class="inline-block bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit">
+                Interactive Demos
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <span class="bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">AI Avatars</span> Guide Every Prospect
+              </h2>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Real-time product walkthroughs</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Personalized for each visitor</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Always available, no setup required</span>
+                </li>
+              </ul>
+            </div>
           </div>
-          <!-- Stacked white layers -->
-          <!-- Step 1: bottom shadow -->
-          <div
-            class="w-screen bg-white border-t border-gray-200 h-[10vh]"
-          ></div>
-          <!-- Step 2: bottom shadow -->
-          <div
-            class="w-screen bg-white border-t border-gray-200 h-[10vh] step-shadow-top"
-          ></div>
-          <!-- Step 3: top shadow -->
-          <div
-            class="w-screen bg-white border-t border-gray-200 h-[10vh] step-shadow-top"
-          ></div>
-          <!-- Step 4: top shadow -->
-          <div
-            class="w-screen bg-white border-t border-gray-200 h-[10vh] step-shadow-top"
-          ></div>
-          <div
-            class="w-screen bg-white border-y border-gray-200 h-[10vh] step-shadow-top"
-          ></div>
+          <!-- Right Column -->
+          <div class="flex-1 bg-white rounded-md p-8 flex items-center justify-center border border-gray-200 relative overflow-hidden">
+  <!-- SVG wave background can be re-added here with a background-image style if desired -->
+            <div class="text-center relative z-10">
+              <div class="w-32 h-32 bg-gradient-to-br from-pink-100 to-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg class="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-600 font-medium">AI Avatar Demo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Smart Integrations -->
+        <div class="flex flex-col md:flex-row h-[50vh] gap-4 mb-4">
+          <!-- Left Column -->
+          <div class="flex-1 bg-gray-50 rounded-md p-8 flex flex-col justify-center relative overflow-hidden">
+            <div class="relative z-10">
+              <div class="inline-block bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit">
+                Smart Integrations
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <span class="bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">Seamless</span> Workflow Integration
+              </h2>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">CRM sync & automated follow-ups</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Slack notifications & call booking</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Custom guardrails & sales scripts</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div class="flex-1 bg-white rounded-md p-8 flex items-center justify-center border border-gray-200 relative overflow-hidden">
+            <div class="text-center relative z-10">
+              <div class="w-32 h-32 bg-gradient-to-br from-pink-100 to-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg class="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              </div>
+              <p class="text-gray-600 font-medium">Connected Workflow</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Proven Results -->
+        <div class="flex flex-col md:flex-row h-[50vh] gap-4">
+          <!-- Left Column -->
+          <div class="flex-1 bg-gray-50 rounded-md p-8 flex flex-col justify-center relative overflow-hidden">
+            <div class="relative z-10">
+              <div class="inline-block bg-gray-800 text-white text-xs font-semibold px-3 py-1 rounded-full mb-4 w-fit">
+                Proven Results
+              </div>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                <span class="bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">Measurable</span> Business Impact
+              </h2>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Capture prospects at peak interest</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">Scale to thousands of demos per hour</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="text-lg text-gray-700">More pipeline, zero drop-off</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div class="flex-1 bg-white rounded-md p-8 flex items-center justify-center border border-gray-200 relative overflow-hidden">
+            <div class="text-center relative z-10">
+              <div class="w-32 h-32 bg-gradient-to-br from-pink-100 to-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
+                <svg class="w-16 h-16 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v4a2 2 0 01-2 2h-2a2 2 0 00-2-2z"></path>
+                </svg>
+              </div>
+              <p class="text-gray-600 font-medium">Growth Analytics</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+    <!-- ================= End Aviator Key Features Section ================= -->
     <!-- Footer -->
     <footer class="w-full">
       <div class="max-w-7xl mx-auto py-2 pt-4">
