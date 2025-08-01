@@ -1,0 +1,100 @@
+/*******************************
+ * Font Loading
+ *******************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+body {
+  font-family: 'Montserrat', 'ui-sans-serif', 'system-ui', sans-serif;
+  overflow-x: hidden;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* In your global styles (e.g., styles.css) */
+.blinking-cursor {
+  display: inline-block;
+  font-weight: bold;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Design System CSS Variables */
+@layer base {
+  :root {
+    --background: 0 0% 12%;
+    --foreground: 210 40% 98%;
+    --muted: 210 40% 20%;
+    --muted-foreground: 215.4 16.3% 65%;
+    --popover: 210 12% 15%;
+    --popover-foreground: 210 40% 98%;
+    --card: 210 12% 15%;
+    --card-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 25%;
+    --input: 214.3 31.8% 25%;
+    --primary: 145 85% 48%;
+    --primary-foreground: 210 12% 12%;
+    --secondary: 210 40% 20%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 210 40% 20%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 145 85% 48%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 210 12% 8%;
+    --foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --popover: 210 12% 10%;
+    --popover-foreground: 210 40% 98%;
+    --card: 210 12% 10%;
+    --card-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 20%;
+    --input: 217.2 32.6% 20%;
+    --primary: 145 85% 48%;
+    --primary-foreground: 210 12% 8%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 145 85% 48%;
+  }
+}
+
+/* Custom Flow Component Styles */
+.ring-accent-500 {
+  --tw-ring-color: #d946ef;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*
+ * Utility class to hide scrollbars across browsers.
+ *
+ * Usage: Add the `hide-scrollbar` class to any scrollable element to hide its scrollbar while retaining scroll functionality.
+ *
+ * This works for Webkit browsers (Chrome, Safari, Edge), Firefox, and IE/Edge (legacy).
+ */
+.hide-scrollbar {
+  /* Hide scrollbar for Webkit browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

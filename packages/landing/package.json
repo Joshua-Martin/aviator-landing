@@ -1,0 +1,19 @@
+{
+  "name": "@demo-agent/landing",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Static landing page built with Tailwind CSS and custom build system",
+  "scripts": {
+    "build": "npx tsx ../build/build.ts"
+  },
+  "devDependencies": {
+    "tailwindcss": "catalog:",
+    "autoprefixer": "catalog:",
+    "postcss": "catalog:",
+    "live-server": "catalog:",
+    "concurrently": "catalog:",
+    "chokidar-cli": "catalog:",
+    "tsx": "catalog:"
+  }
+}

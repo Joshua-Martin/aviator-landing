@@ -1,0 +1,15 @@
+{
+  "name": "@demo-agent/build",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Custom static site build system with geo configuration support",
+  "main": "build.ts",
+  "scripts": {
+    "build": "tsx build.ts"
+  },
+  "devDependencies": {
+    "tsx": "catalog:",
+    "@types/node": "catalog:"
+  }
+} 

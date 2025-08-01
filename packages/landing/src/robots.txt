@@ -1,0 +1,10 @@
+# www.robotstxt.org/
+# Allow crawling of all content
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aviatorcx.com/sitemap.xml
+
+# Additional crawl directives for SEO optimization
+Crawl-delay: 1

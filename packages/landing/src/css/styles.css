@@ -1,0 +1,88 @@
+/*******************************
+ * Font Loading
+ *******************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+body {
+  font-family: 'Montserrat', 'ui-sans-serif', 'system-ui', sans-serif;
+  overflow-x: hidden;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: rgba(243, 244, 246, 0.8);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: rgba(156, 163, 175, 0.6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(107, 114, 128, 0.8);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Utility classes for step shadow effects on stacked divs.
+  .step-shadow-bottom: Adds a subtle shadow to the bottom edge.
+  .step-shadow-top:    Adds a subtle shadow to the top edge.
+  Use to create a "step" effect between stacked sections.
+*/
+.step-shadow-bottom {
+  /* Subtle bottom shadow: soft blur, low opacity for a modern step effect */
+  box-shadow: 0 6px 16px -6px rgba(0, 0, 0, 0.1);
+}
+.step-shadow-top {
+  /* Subtle top shadow: soft blur, low opacity for a modern step effect */
+  box-shadow: 0 -6px 16px -6px rgba(0, 0, 0, 0.1);
+}
+
+.aviator-button {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid #0a0a0a;
+  background-color: #171717;
+  padding: 6px 12px;
+  color: #f5f5f5;
+  box-shadow:
+    inset 0 1px #525252,
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.aviator-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
+}
+.aviator-button:hover {
+  background-color: #262626;
+}
+.aviator-button:active {
+  background-color: #0a0a0a;
+  box-shadow:
+    inset 0 1px #262626,
+    0 0 #0000;
+}

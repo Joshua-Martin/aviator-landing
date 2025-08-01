@@ -1,0 +1,14 @@
+{
+  "sourceDir": "packages/landing/src",
+  "geoDir": "packages/build/geo",
+  "cssOutputDir": "dist/css",
+  "geoCss": "packages/build/css/geo.css",
+  "ignore": ["package.json", "node_modules", "tailwind.config.js", "postcss.config.js", "js/components/assets/index.css", "js/components/index.html"],
+  "replacements": [
+    {
+      "targetHtml": "index.html",
+      "elementId": "geo-root",
+      "replacementFile": "index.html"
+    }
+  ]
+}

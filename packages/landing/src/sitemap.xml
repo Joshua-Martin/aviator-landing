@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Main page -->
+  <url>
+    <loc>https://aviatorcx.com/</loc>
+    <lastmod>2025-07-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aviatorcx.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aviatorcx.com/"/>
+    <image:image>
+      <image:loc>https://aviatorcx.com/assets/aviator-og.png</image:loc>
+      <image:title>Aviator AI Avatar Platform</image:title>
+      <image:caption>Interactive AI Avatar Product Demo Platform</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
