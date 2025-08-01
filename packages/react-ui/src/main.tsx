@@ -8,6 +8,7 @@ import { VideoDemo } from './components/video-grid/video-demo';
 import { HeroImages } from './components/hero/HeroImages';
 import { SocialLinks } from './components/social-links/social-links';
 import Banner from './components/banner/Banner';
+import HeroBackground from './components/hero/HeroBackground';
 
 // Create roots for both components
 const navRoot = document.getElementById('nav-root');
@@ -17,6 +18,7 @@ const videoDemoRoot = document.getElementById('video-demo-root');
 const heroImageRoot = document.getElementById('hero-image-root');
 const socialLinksRoot = document.getElementById('social-links-root');
 const bannerRoot = document.getElementById('banner-root');
+const heroBackgroundRoot = document.getElementById('hero-background-root');
 
 // Render NavBar
 if (navRoot) {
@@ -45,6 +47,12 @@ if (socialLinksRoot) {
 
 if (bannerRoot) {
   createRoot(bannerRoot).render(<Banner />);
+}
+
+if (heroBackgroundRoot) {
+  createRoot(heroBackgroundRoot).render(
+    <HeroBackground className="opacity-80" animationSpeed={1.2} gradientIntensity={0.8} />
+  );
 }
 
 /**Create a root element for the cookie consent banner
