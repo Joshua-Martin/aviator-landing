@@ -135,12 +135,6 @@
      id="path8"
      style="display:inline;fill:url(#linearGradient13)" />
   <path
-     fill-rule="evenodd"
-     clip-rule="evenodd"
-     d="M10.8857 18.0011C10.4756 17.591 10.4756 16.9262 10.8857 16.5161C11.2957 16.1061 11.9605 16.1061 12.3706 16.5161L14.598 18.7435L20.2902 13.0513C20.7002 12.6413 21.3651 12.6413 21.7751 13.0513C22.1852 13.4614 22.1852 14.1262 21.7751 14.5362L15.3404 20.9709C14.9545 21.3568 14.3429 21.3795 13.9304 21.039L13.8555 20.9709L10.8857 18.0011Z"
-     fill="#080B0E"
-     id="path9" />
-  <path
      d="M40.2065 4.89226L37.4431 10.1519L34.2724 5.18724L40.2065 4.89226Z"
      fill="#89EECE"
      stroke="#080B0E"
@@ -166,4 +160,40 @@
      transform="rotate(44.9849 4.75391 32.7701)"
      fill="#080B0E"
      id="rect10" />
+  <rect
+     style="fill:#080b0e;fill-opacity:1;stroke-width:0.678823;stroke-opacity:0.635897"
+     id="rect14"
+     width="2.5618789"
+     height="5.0658512"
+     x="8.0885611"
+     y="16.424925"
+     rx="0.5"
+     ry="0.25000003" />
+  <rect
+     style="fill:#080b0e;fill-opacity:1;stroke-width:0.844912;stroke-opacity:0.635897"
+     id="rect14-6"
+     width="2.5618789"
+     height="7.8480721"
+     x="12.151292"
+     y="13.642703"
+     rx="0.5"
+     ry="0.38730276" />
+  <rect
+     style="fill:#080b0e;fill-opacity:1;stroke-width:0.678823;stroke-opacity:0.635897"
+     id="rect14-6-5"
+     width="2.5618789"
+     height="5.0658507"
+     x="16.214024"
+     y="16.424925"
+     rx="0.5"
+     ry="0.25" />
+  <rect
+     style="fill:#080b0e;fill-opacity:1;stroke-width:0.96;stroke-opacity:0.635897"
+     id="rect14-6-9"
+     width="2.5618789"
+     height="10.131701"
+     x="20.276756"
+     y="11.359074"
+     rx="0.5"
+     ry="0.5" />
 </svg>
