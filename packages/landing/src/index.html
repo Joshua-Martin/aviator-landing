@@ -168,7 +168,7 @@
     </style>
   </head>
   <body
-    class="flex flex-col items-center justify-center overflow-y-auto bg-blue-50 w-full max-w-full"
+    class="flex flex-col items-center justify-center overflow-y-auto bg-yellow-50 w-full max-w-full"
   >
     <header>
       <div id="nav-root"></div>
@@ -183,7 +183,7 @@
       <!-- Rounded gradient overlay -->
       <div class="absolute inset-0 z-10 pointer-events-none select-none">
         <div
-          class="absolute inset-0 bg-gradient-to-b from-blue-100/40 via-blue-50/20 to-blue-100/10"
+          class="absolute inset-0 bg-gradient-to-b from-yellow-100/40 via-yellow-50/20 to-yellow-100/10"
         ></div>
       </div>
 
@@ -221,27 +221,28 @@
     </section>
 
        <!-- ================= How It Works Section ================= -->
-       <section class="w-full py-20 bg-gradient-to-b from-blue-50 to-white">
+       <section class="w-full py-20 bg-gradient-to-b from-yellow-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <!-- Section Header -->
           <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <div
+              class="inline-block bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text text-sm font-semibold tracking-wide uppercase mb-4"
+            >
               How It Works
-            </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Transform your product demos into interactive AI experiences in just two simple steps
-            </p>
+            </h2>
           </div>
   
           <!-- Two Column Layout -->
           <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
             <!-- Left Column: Teach -->
-            <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-amber-50 to-orange-100">
+            <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#fffefc] to-[#f7f4eb] shadow-md">
               <!-- SVG Background -->
-              <div class="absolute inset-0 opacity-20">
-                <img src="./assets/dev-assets/indigo_wave_desktop.svg" alt="" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 mt-20">
+                <img src="./assets/dev-assets/indigo_wave_desktop.svg" alt="" class="w-full h-1/2 object-cover" />
               </div>
-              
               <!-- Content -->
               <div class="relative z-10 p-8 lg:p-12 text-gray-800">
                 <div class="flex items-center mb-6">
@@ -252,54 +253,44 @@
                   </div>
                   <h3 class="text-3xl font-bold text-gray-900">Teach</h3>
                 </div>
-                
                 <p class="text-lg mb-6 text-gray-700">
                   Capture your web app and upload any product documents you'd like the AI to use to understand your product.
                 </p>
-                
-                <div class="space-y-4 mb-8">
-                  <div class="flex items-start">
-                    <div class="w-6 h-6 bg-gray-800/10 rounded-full flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-                    </div>
-                    <p class="text-gray-700">Upload Case Studies, Documentation, slides, or any content you want the AI to reference</p>
-                  </div>
-                  
-                  <div class="flex items-start">
-                    <div class="w-6 h-6 bg-gray-800/10 rounded-full flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-                    </div>
-                    <p class="text-gray-700">AI learns your product's unique value propositions and key features</p>
-                  </div>
-                  
-                  <div class="flex items-start">
-                    <div class="w-6 h-6 bg-gray-800/10 rounded-full flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-                    </div>
-                    <p class="text-gray-700">Content is intelligently indexed for real-time retrieval during demos</p>
-                  </div>
-                </div>
-                
+                <ul class="space-y-4 mb-8">
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">Upload Case Studies, Documentation, slides, or any content you want the AI to reference</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">AI learns your product's unique value propositions and key features</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">Content is intelligently indexed for real-time retrieval during demos</span>
+                  </li>
+                </ul>
                 <!-- Image Placeholder -->
-                <div class="bg-gray-100/80 rounded-lg h-56 flex flex-col justify-end border-2 border-dashed border-gray-300 overflow-hidden">
-                  <div class="h-full flex items-center justify-center">
-                    <img src="./assets/dev-assets/icons/brain.svg" alt="AI Training Process" class="w-24 h-24 opacity-60" />
-                  </div>
-                  <div class="bg-white/90 p-3 text-center">
-                    <p class="text-gray-600 font-medium text-sm">AI Training Process</p>
-                    <p class="text-gray-500 text-xs">Upload & process your content</p>
-                  </div>
-                </div>
+                <img
+                  src="./assets/aviator-ui-clip.png"
+                  alt="AI Training Process"
+                  class="w-full h-auto object-contain rounded-lg shadow"
+                />
               </div>
             </div>
-  
+
             <!-- Right Column: Deploy -->
-            <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-orange-100 to-amber-50">
+            <div class="relative overflow-hidden rounded-xl bg-gradient-to-br from-[#fffefc] to-[#f7f4eb] shadow-md">
               <!-- SVG Background -->
-              <div class="absolute inset-0 opacity-20">
-                <img src="./assets/dev-assets/aqua_wave_desktop.svg" alt="" class="w-full h-full object-cover" />
+              <div class="absolute bottom-0 mt-20">
+                <img src="./assets/dev-assets/aqua_wave_desktop.svg" alt="" class="w-full h-1/2 object-cover" />
               </div>
-              
               <!-- Content -->
               <div class="relative z-10 p-8 lg:p-12 text-gray-800">
                 <div class="flex items-center mb-6">
@@ -310,48 +301,38 @@
                   </div>
                   <h3 class="text-3xl font-bold text-gray-900">Deploy</h3>
                 </div>
-                
                 <p class="text-lg mb-6 text-gray-700">
                   Embed Aviator product demo on your website, prospects will be able to join a live interactive session with an AI Avatar, 24/7, in hundreds of languages.
                 </p>
-                
-                <div class="space-y-4 mb-8">
-                  <div class="flex items-start">
-                    <div class="w-6 h-6 bg-gray-800/10 rounded-full flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-                    </div>
-                    <p class="text-gray-700">One-line embed code integrates seamlessly with any website</p>
-                  </div>
-                  
-                  <div class="flex items-start">
-                    <div class="w-6 h-6 bg-gray-800/10 rounded-full flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-                    </div>
-                    <p class="text-gray-700">AI Avatar engages prospects in natural, contextual conversations</p>
-                  </div>
-                  
-                  <div class="flex items-start">
-                    <div class="w-6 h-6 bg-gray-800/10 rounded-full flex items-center justify-center mt-1 mr-3 flex-shrink-0">
-                      <div class="w-2 h-2 bg-gray-600 rounded-full"></div>
-                    </div>
-                    <p class="text-gray-700">Real-time demo control and personalized guidance for every visitor</p>
-                  </div>
-                </div>
-                
+                <ul class="space-y-4 mb-8">
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">One-line embed code integrates seamlessly with any website</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">AI Avatar engages prospects in natural, contextual conversations</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-orange-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-gray-700">Real-time demo control and personalized guidance for every visitor</span>
+                  </li>
+                </ul>
                 <!-- Image Placeholder -->
-                <div class="bg-gray-100/80 rounded-lg h-56 flex flex-col justify-end border-2 border-dashed border-gray-300 overflow-hidden">
-                  <div class="h-full flex items-center justify-center">
-                    <img src="./assets/dev-assets/icons/robot_msg.svg" alt="AI Deployment Process" class="w-24 h-24 opacity-60" />
-                  </div>
-                  <div class="bg-white/90 p-3 text-center">
-                    <p class="text-gray-600 font-medium text-sm">AI Deployment Process</p>
-                    <p class="text-gray-500 text-xs">Embed & engage visitors</p>
-                  </div>
-                </div>
+                <img
+                  src="./assets/aviator-ui-clip-crop.png"
+                  alt="AI Training Process"
+                  class="w-full h-auto object-contain rounded-lg shadow"
+                />
               </div>
             </div>
           </div>
-  
           <!-- CTA Section -->
           <div class="text-center mt-12">
             <div class="inline-flex items-center bg-gray-100 rounded-full px-6 py-3">
@@ -401,7 +382,7 @@
 
       <div class="flex flex-col max-w-6xl mx-auto relative z-10">
         <!-- Row 1: Interactive Demos -->
-        <div class="flex flex-col md:flex-row h-[50vh] gap-4 mb-4">
+        <div class="flex flex-col md:flex-row h-[70vh] gap-4 mb-4">
           <!-- Left Column -->
           <div
             class="flex-1 bg-gray-50 rounded-md p-8 flex flex-col justify-center relative overflow-hidden"
@@ -474,28 +455,13 @@
           </div>
           <!-- Right Column -->
           <div
-            class="flex-1 bg-white rounded-md p-8 flex items-center justify-center border border-gray-200 relative overflow-hidden"
+            class="flex-1 w-full min-w-[350px] bg-white rounded-md p-2 flex items-center justify-center border border-gray-200 relative overflow-hidden"
           >
-            <!-- SVG wave background can be re-added here with a background-image style if desired -->
-            <div class="text-center relative z-10">
-              <div
-                class="w-32 h-32 bg-gradient-to-br from-pink-100 to-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto"
-              >
-                <svg
-                  class="w-16 h-16 text-gray-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-              </div>
-              <p class="text-gray-600 font-medium">AI Avatar Demo</p>
+          <img
+          src="./assets/aviator-ui-clip-crop.png"
+          alt="AI Training Process"
+          class="w-full h-full max-h-[420px] object-contain"
+          />
             </div>
           </div>
         </div>
