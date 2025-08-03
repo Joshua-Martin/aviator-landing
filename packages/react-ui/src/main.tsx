@@ -9,6 +9,7 @@ import { HeroImages } from './components/hero/HeroImages';
 import { SocialLinks } from './components/social-links/social-links';
 import Banner from './components/banner/Banner';
 import HeroBackground from './components/hero/HeroBackground';
+import { FAQ } from './components/faq'; // FAQ component for root rendering
 
 // Create roots for both components
 const navRoot = document.getElementById('nav-root');
@@ -19,6 +20,7 @@ const heroImageRoot = document.getElementById('hero-image-root');
 const socialLinksRoot = document.getElementById('social-links-root');
 const bannerRoot = document.getElementById('banner-root');
 const heroBackgroundRoot = document.getElementById('hero-background-root');
+const faqRoot = document.getElementById('faq-root'); // Root element for FAQ section
 
 // Render NavBar
 if (navRoot) {
@@ -53,6 +55,16 @@ if (heroBackgroundRoot) {
   createRoot(heroBackgroundRoot).render(
     <HeroBackground className="opacity-80" animationSpeed={1.2} gradientIntensity={0.8} />
   );
+}
+
+// Render FAQ section if root exists
+if (faqRoot) {
+  /**
+   * Renders the FAQ component at the #faq-root element.
+   * The FAQ component loads its data from the build path and is styled to match the latest design.
+   * This block allows easy mounting/unmounting of the FAQ section for future flexibility.
+   */
+  createRoot(faqRoot).render(<FAQ />);
 }
 
 /**Create a root element for the cookie consent banner

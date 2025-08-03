@@ -17,6 +17,7 @@ import { useState, useEffect, useRef } from 'react';
 import { NavBarProps, NavItem } from './nav';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AviatorButton } from '../custom/aviator-button';
+import AviatorLogoIcon from '../icons/aviator-logo';
 
 const NavBar: React.FC<NavBarProps> = ({ items }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -182,8 +183,9 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
         <div className="flex h-16 items-center justify-between max-w-[80rem] mx-auto">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a className="flex items-start" href="/">
-              <span className="text-aviator-black font-[900] text-3xl font-michroma">AVIATOR</span>
+            <a className="flex items-center gap-2" href="/">
+            <AviatorLogoIcon  size={18}/>
+              <span className="text-aviator-black font-[900] text-2xl font-michroma">aviator</span>
             </a>
           </div>
 

@@ -1,6 +1,5 @@
 import React, { useMemo, useRef, useState, useLayoutEffect } from 'react';
 import { ExtensionIcon } from '../icons/extension-icon';
-import './step-row.css';
 import { Globe, Mic } from 'lucide-react';
 
 /**
@@ -129,13 +128,13 @@ const CaptureStep: React.FC = (): JSX.Element => {
     <div className="flex w-full flex-col items-center justify-center h-80 bg-gradient-to-br from-white/50 via-aviator-background to-white/50 p-8">
       {/* Browser URL Bar Simulation */}
       <div className="w-full max-w-sm min-w-sm">
-        <div className="step-url-bar rounded-xl p-3">
+        <div className="step-url-bar rounded-xl p-3 bg-gray-800/80 backdrop-blur-sm border border-gray-600/30">
           <div className="flex items-center space-x-3">
-            <Globe color="#fff" />
-            <div className="flex-1 bg-white/10 rounded-md px-3 py-2 text-sm text-white/80">
+            <Globe className="text-gray-300" size={20} />
+            <div className="flex-1 bg-gray-700/50 rounded-md px-3 py-2 text-sm text-gray-200 border border-gray-600/30">
               yourapp.com
             </div>
-            <ExtensionIcon size={24} color="#fff" />
+            <ExtensionIcon size={24} color="#d1d5db" />
           </div>
         </div>
       </div>
@@ -182,7 +181,7 @@ const CaptureStep: React.FC = (): JSX.Element => {
         </svg>
         {/* Left icon (Extension) */}
         <div
-          className="step-icon rounded-xl flex items-center justify-center"
+          className="bg-gray-800 border-2 border-gray-600 pl-1 rounded-xl flex items-center justify-center shadow-lg"
           style={{
             position: 'absolute',
             left: left,
@@ -195,11 +194,11 @@ const CaptureStep: React.FC = (): JSX.Element => {
             justifyContent: 'center',
           }}
         >
-          <ExtensionIcon size={iconSize * 0.7} color="#f5f5f5" aria-label="Browser Extension" />
+          <ExtensionIcon size={iconSize * 0.7} color="#e5e7eb" aria-label="Browser Extension" />
         </div>
         {/* Right icon (Mic) */}
         <div
-          className="step-icon rounded-xl flex items-center justify-center"
+          className="bg-gray-800 border-2 border-gray-600 rounded-xl flex items-center justify-center shadow-lg"
           style={{
             position: 'absolute',
             left: right,
@@ -207,12 +206,9 @@ const CaptureStep: React.FC = (): JSX.Element => {
             zIndex: 1,
             width: iconSize,
             height: iconSize,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
           }}
         >
-          <Mic size={iconSize * 0.7} color="#f5f5f5" aria-label="Microphone" />
+          <Mic size={iconSize * 0.7} aria-label="Microphone" className="text-gray-200" />
         </div>
       </div>
     </div>

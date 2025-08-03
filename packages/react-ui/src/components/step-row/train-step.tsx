@@ -1,6 +1,5 @@
 import React, { useRef, useMemo, useState, useLayoutEffect } from 'react';
 import { Code, Upload } from 'lucide-react';
-import './step-row.css';
 
 interface Position {
   x: number;
@@ -97,13 +96,13 @@ const TrainStep: React.FC = (): JSX.Element => {
         // Top left icon (Code)
         x: containerWidth * 0.15 - halfIcon, // Left-side positioned at 15% for better alignment
         y: containerHeight * 0.2, // Position at 20% from top for better vertical spacing
-        element: <Code size={iconSize * 0.65} color="#f5f5f5" aria-label="Code" />,
+        element: <Code size={iconSize * 0.65} className="text-gray-200" aria-label="Code" />,
       },
       {
         // Bottom right icon (Upload)
         x: containerWidth * 0.85 - halfIcon, // Right-side positioned at 85% for better alignment
         y: containerHeight * 0.6, // Position at 60% from top for better vertical alignment
-        element: <Upload size={iconSize * 0.65} color="#f5f5f5" aria-label="Upload" />,
+        element: <Upload size={iconSize * 0.65} className="text-gray-200" aria-label="Upload" />,
       },
     ],
     [containerWidth, containerHeight, padding, iconSize, halfIcon]
@@ -178,7 +177,7 @@ const TrainStep: React.FC = (): JSX.Element => {
                   transform: 'translateZ(0)', // Force GPU acceleration
                 }}
               >
-                <div className="step-icon rounded-xl h-full w-full flex items-center justify-center">
+                <div className="bg-gray-800 border-2 border-gray-600 rounded-xl h-full w-full flex items-center justify-center shadow-lg">
                   {pos.element}
                 </div>
               </div>
