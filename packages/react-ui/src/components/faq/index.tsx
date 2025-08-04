@@ -37,27 +37,29 @@ export const FAQ: React.FC = () => {
       {faqs.map((faq, idx) => (
         <div
           key={faq.question}
-          className="bg-white rounded-2xl shadow-sm border border-gray-200 mb-5 transition-shadow duration-200 hover:shadow-md focus-within:shadow-lg focus-within:shadow-purple-100"
+          className="bg-white rounded-2xl shadow-sm border border-gray-200 mb-5 transition-shadow duration-200 hover:shadow-md"
         >
           <button
             aria-expanded={openIndex === idx}
             aria-controls={`faq-answer-${idx}`}
             onClick={() => handleToggle(idx)}
-            className="w-full flex items-center justify-between p-6 text-lg font-semibold bg-transparent border-none cursor-pointer text-gray-800 outline-none focus:outline-none"
+            className="w-full flex items-center justify-between p-6 text-base sm:text-lg font-semibold bg-transparent border-none cursor-pointer text-gray-800 outline-none focus:outline-none"
           >
             <span className="text-left">{faq.question}</span>
             {openIndex === idx ? (
-              <div className="bg-gradient-to-br from-orange-400 to-red-500 rounded-full p-2 flex-shrink-0 ml-4">
+              <div className="bg-blue-200 rounded-full p-2 flex-shrink-0 ml-4">
                 <Minus 
                   size={20} 
-                  className="text-white" 
+                  strokeWidth={3}
+                  className="text-gray-700" 
                 />
               </div>
             ) : (
-              <div className="bg-gradient-to-br from-orange-400 to-red-500 rounded-full p-2 flex-shrink-0 ml-4">
+              <div className="bg-blue-200 rounded-full p-2 flex-shrink-0 ml-4">
                 <Plus 
                   size={20} 
-                  className="text-white" 
+                  strokeWidth={3}
+                  className="text-gray-700" 
                 />
               </div>
             )}

@@ -210,7 +210,7 @@ function generateFaqSchema(faqJsonPath: string): string {
   const schemaObject = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqData.faqs.map((faq: any) => ({
+    "mainEntity": faqData.map((faq: any) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {

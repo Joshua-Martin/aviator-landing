@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo } from 'react';
 import { cn } from '../../lib/utils';
-import { Loader2, Play, X } from 'lucide-react';
+import { Loader2, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { AviatorLogoIcon } from '../icons/aviator-logo';
 import { trackVideoEvent } from '../../lib/firebase-config';
 
@@ -26,18 +26,6 @@ interface DemoVideo {
   buttonLabel: string;
   /** Hero title text */
   heroTitle: string;
-  /** Value propositions with icons */
-  valueProps: ValueProposition[];
-}
-
-/**
- * Value proposition interface
- */
-interface ValueProposition {
-  /** Icon file name from assets/dev-assets/icons/line-art/ */
-  icon: string;
-  /** Short description text */
-  text: string;
 }
 
 /**
@@ -95,13 +83,7 @@ export const VideoDemo: React.FC = () => {
         logo: './assets/videos/demo-logos/cursor.png',
         landscapeSrc: './assets/videos/16-9/Cursor-Demo-Landscape-1080p-24fps.mp4',
         portraitSrc: './assets/videos/9-16/Cursor-Demo-portrait-1080p-30fps.mp4',
-        heroTitle: 'Watch Aviator Autonomously Demo the Cursor IDE',
-        valueProps: [
-          { icon: 'ai_sparkle.svg', text: 'AI-powered code demonstrations in real-time' },
-          { icon: 'people.svg', text: 'Interactive developer onboarding experiences' },
-          { icon: 'ai_documents.svg', text: 'Contextual feature explanations and tutorials' },
-          { icon: 'refresh_circle.svg', text: 'Seamless integration with development workflows' }
-        ]
+        heroTitle: 'Watch Aviator Autonomously Demo the Cursor IDE'
       },
       {
         id: 'hubspot',
@@ -111,13 +93,7 @@ export const VideoDemo: React.FC = () => {
         logo: './assets/videos/demo-logos/hubspot.png',
         landscapeSrc: './assets/videos/16-9/Hubspot-Demo-Landscape-1080p-30fps.mp4',
         portraitSrc: './assets/videos/9-16/Hubspot-Demo-Portrait-1080p-30fps.mp4',
-        heroTitle: 'Experience Aviator\'s Sales Software Demo Magic',
-        valueProps: [
-          { icon: 'bar_chart.svg', text: 'Personalized CRM workflow demonstrations' },
-          { icon: 'money_bag.svg', text: 'Revenue-focused feature highlighting' },
-          { icon: 'calendar.svg', text: '24/7 prospect engagement without scheduling' },
-          { icon: 'magnifying_glass.svg', text: 'Deep-dive analytics and reporting walkthroughs' }
-        ]
+        heroTitle: 'Experience Aviator\'s Sales Software Demo Magic'
       },
     ],
     []
@@ -302,96 +278,39 @@ export const VideoDemo: React.FC = () => {
     handleVideoSwitch(videoId);
   };
 
+  /**
+   * Navigate to previous video
+   */
+  const handlePreviousVideo = (): void => {
+    const currentIndex = videos.findIndex(video => video.id === selectedVideoId);
+    const previousIndex = currentIndex > 0 ? currentIndex - 1 : videos.length - 1;
+    handleTabSwitch(videos[previousIndex].id);
+  };
+
+  /**
+   * Navigate to next video
+   */
+  const handleNextVideo = (): void => {
+    const currentIndex = videos.findIndex(video => video.id === selectedVideoId);
+    const nextIndex = currentIndex < videos.length - 1 ? currentIndex + 1 : 0;
+    handleTabSwitch(videos[nextIndex].id);
+  };
+
   const currentVideo = getCurrentVideo();
 
   return (
-    <div className="w-full max-w-[90rem] space-y-3">
-      {/* Tab Buttons - Outside Container */}
-      <div className="flex justify-center gap-2">
-        {videos.map((video: DemoVideo) => (
-          <button
-            key={video.id}
-            onClick={() => handleTabSwitch(video.id)}
-            className={cn(
-              'px-4 py-2 rounded-lg font-medium text-sm transition-all duration-200',
-              selectedVideoId === video.id
-                ? 'bg-gray-800 text-white'
-                : 'bg-gray-50 text-black hover:bg-gray-100 border border-gray-100/40'
-            )}
-            disabled={isLoading || isTransitioning}
-          >
-            {video.buttonLabel}
-          </button>
-        ))}
-      </div>
+    <div className="w-full max-w-[80rem]">
 
-      {/* Main Container with White to Gray Gradient */}
-      <div className="bg-gradient-to-br from-white/80 to-gray-50/80 rounded-2xl p-10 md:p-14">
-
-        {/* Main Content Area */}
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Left Side - Hero Text and CTAs */}
-          <div className="space-y-6">
-            {/* Hero Title */}
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-              {currentVideo.heroTitle}
-            </h2>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={handlePlayClick}
-                className="px-6 py-3 bg-gradient-to-r from-pink-500 to-orange-500 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 flex items-center justify-center"
-                disabled={isLoading || isTransitioning}
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    Loading...
-                  </>
-                ) : (
-                  <>
-                    <Play className="w-5 h-5 mr-2" />
-                    Watch Video
-                  </>
-                )}
-              </button>
-              <a
-                href="#hero"
-                className="px-6 py-3 bg-white border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-200 text-center"
-              >
-                Join Waitlist
-              </a>
-            </div>
-          </div>
-
-          {/* Right Side - Value Propositions */}
-          <div className="flex items-end justify-end">
-            <div className="flex flex-col items-start justify-start space-y-4">
-            {currentVideo.valueProps.map((prop: ValueProposition, index: number) => (
-              <div key={index} className="flex items-center gap-3">
-                <div className="w-6 h-6 flex-shrink-0">
-                  <img
-                    src={`./assets/dev-assets/icons/line-art/${prop.icon}`}
-                    alt=""
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <p className="text-gray-700 text-sm font-medium">{prop.text}</p>
-              </div>
-            ))}
-            </div>
-          </div>
-        </div>
-
+      {/* Main Container with Video Background */}
+      <div className="rounded-2xl p-2 md:p-4 bg-blue-50/70 shadow-md">
         {/* Video Container - Always visible */}
-        <div className="relative mt-8 h-[60vh]">
+        <div className="relative">
           {/* Video Container - Always positioned */}
           <div className="relative h-full">
             <div className="relative bg-black rounded-xl overflow-hidden h-full">
               {/* Loading overlay */}
               {(isLoading || isTransitioning) && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/80 z-20 transition-opacity duration-300">
+                <div className="absolute inset-0 flex items-center justify-center bg-blue-700/80 z-20 transition-opacity duration-300">
                   <Loader2 className="w-12 h-12 text-white animate-spin" />
                 </div>
               )}
@@ -426,9 +345,14 @@ export const VideoDemo: React.FC = () => {
 
                 {/* Video Overlay - Show when not playing */}
                 {!isPlaying && (
-                  <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
                     {/* Semi-transparent overlay */}
-                    <div className="absolute inset-0 bg-black/30"></div>
+                    <div className="absolute inset-0 bg-black/60"></div>
+                    
+                    {/* Title Text */}
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight text-center mb-8 px-6 z-10 max-w-[40rem]">
+                      {currentVideo.heroTitle}
+                    </h2>
                     
                     {/* Play button - centered in visible area */}
                     <button
@@ -447,6 +371,42 @@ export const VideoDemo: React.FC = () => {
                         />
                       )}
                     </button>
+
+                    {/* Bottom Navigation Controls */}
+                    <div className="absolute bottom-8 left-0 right-0 flex justify-between items-center px-8 z-10">
+                      {/* Left Side - Navigation Arrows */}
+                      <div className="flex gap-3">
+                        <button
+                          onClick={handlePreviousVideo}
+                          className="w-12 h-12 bg-white/50 hover:bg-white/70 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm"
+                          disabled={isLoading || isTransitioning}
+                        >
+                          <ChevronLeft className="w-6 h-6 text-white" />
+                        </button>
+                        <button
+                          onClick={handleNextVideo}
+                          className="w-12 h-12 bg-white/50 hover:bg-white/70 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm"
+                          disabled={isLoading || isTransitioning}
+                        >
+                          <ChevronRight className="w-6 h-6 text-white" />
+                        </button>
+                      </div>
+
+                      {/* Right Side - Video Indicators */}
+                      <div className="flex gap-3">
+                        {videos.map((video) => (
+                          <div
+                            key={video.id}
+                            className={cn(
+                              "h-2 w-16 rounded-full transition-all duration-300 shadow-sm",
+                              selectedVideoId === video.id
+                                ? "bg-gradient-to-r from-blue-600 to-indigo-500 shadow-blue-500/30"
+                                : "bg-white/40 hover:bg-white/60"
+                            )}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 )}
               </div>

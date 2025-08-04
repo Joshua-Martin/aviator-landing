@@ -168,7 +168,6 @@
 
       #hero {
         position: relative;
-        background: linear-gradient(135deg, #fefce8 0%, #fef3c7 50%, #fde68a 100%);
       }
 
       #hero::before {
@@ -193,7 +192,7 @@
     </style>
   </head>
   <body
-    class="flex flex-col items-center justify-center overflow-y-auto bg-yellow-50 w-full max-w-full"
+    class="flex flex-col items-center justify-center overflow-y-auto bg-white w-full max-w-full"
   >
     <header>
       <div id="nav-root"></div>
@@ -204,75 +203,72 @@
       id="hero"
       class="relative flex flex-col h-full w-full items-center justify-center bg-none pb-10"
     >
-      <div
-        class="relative flex w-full h-full flex-col items-center justify-center z-20 min-h-[60vh]"
-      >
-        <div
-          class="flex flex-col items-center justify-center p-6 space-y-6 md:space-y-8"
-        >
-          <h1
-            class="text-5xl md:text-6xl xl:text-7xl font-bold text-center text-gray-900 md:max-w-[40rem]"
-          >
-            <span class="bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text">Transform</span> your demos with AI Avatars
-          </h1>
-          <!-- Subtitle -->
-          <p
-            class="text-center text-lg md:text-2xl text-gray-600 md:max-w-[40rem]"
-          >
-            Instantly engage and convert prospects with interactive,
-            personalized product demos—powered by AI avatars, available 24/7.
-          </p>
-
-          <!-- CTA Button -->
-          <div class="w-full max-w-[28rem]" id="waitlist-root"></div>
+      <div class="relative flex w-full h-full z-20 min-h-[50vh] md:min-h-[70vh] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Two Column Layout -->
+        <div class="flex flex-col md:grid md:grid-cols-2 md:gap-12 items-center justify-center w-full">
+          <!-- Left Column: Content -->
+          <div class="flex flex-col space-y-6 md:space-y-8 items-center justify-center md:items-start md:justify-start text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900">
+              <span class="bg-gradient-to-r from-blue-600 to-indigo-500 text-transparent bg-clip-text">Transform</span> your demos with AI Avatars
+            </h1>
+            <!-- Subtitle -->
+            <p class="text-lg md:text-xl lg:text-2xl text-gray-600 max-w-lg">
+              Instantly engage and convert prospects with interactive,
+              personalized product demos—powered by AI avatars, available 24/7.
+            </p>
+            <!-- CTA Button -->
+            <div class="w-full max-w-[28rem] min-w-[24rem]" id="waitlist-root"></div>
+          </div>
+          
+          <!-- Right Column: Hero Video -->
+          <div class="hidden justify-center lg:justify-end md:flex">
+            <div id="hero-video-root"></div>
+          </div>
         </div>
       </div>
-      <div class="relative flex flex-col items-center justify-center w-screen">
+      <div class="relative flex flex-col items-center justify-center w-screen px-6">
         <div
           class="relative z-20 rounded-2xl md:rounded-[2rem] bg-none"
           id="video-demo-root"
         ></div>
       </div>
     </section>
+    <section>
+      <div id="integration-scroll-root"></div>
+    </section>
 
      
 
       <!-- ================= Features Section ================= -->
-      <section class="w-full py-20 bg-white">
+      <section id="features" class="w-full py-20 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <!-- Section Header -->
           <div class="text-center mb-16">
-            <div class="inline-flex items-center justify-center mb-4">
-              <div class="w-2 h-2 bg-gradient-to-r from-pink-500 to-orange-500 rounded-full mr-2"></div>
-              <div class="inline-block bg-gradient-to-r from-pink-500 to-orange-500 text-transparent bg-clip-text text-sm font-semibold tracking-wide uppercase">
-                Features
-              </div>
-            </div>
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI Avatar Demo Features
+              Why Aviator's AI Avatar Demos Win More Deals
             </h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-              Powerful features designed to help you build, deploy, and manage AI-powered product demonstrations
+              Transform prospects into customers with always-available, personalized demos that scale infinitely.
             </p>
           </div>
 
           <!-- Features Grid -->
           <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Feature 1: Embedded Demos -->
-            <div class="bg-gradient-to-br from-yellow-50/50 to-[#fff0db]/50 border border-yellow-100/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center">
-                <img src="./assets/dev-assets/icons/robot_msg.svg" alt="Embedded Demos" class="w-20 h-20" />
+            <div class="p-8 text-center">
+              <div class="mb-2 flex items-center justify-center h-24">
+                <img src="./assets/aviator-icons/avatar-demo.png" alt="Embedded Demos" class="w-24 h-24 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">Embedded Demos</h3>
               <p class="text-gray-600 leading-relaxed">
-                Let prospects start interactive demos instantly without booking meetings or installations.
+                Let prospects start interactive demos instantly without booking meetings.
               </p>
             </div>
 
             <!-- Feature 2: Interactive DOM Control -->
-            <div class="bg-gradient-to-br from-yellow-50/50 to-[#fff0db]/50 border border-yellow-100/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center">
-                <img src="./assets/dev-assets/icons/page_pointer.svg" alt="Interactive Control" class="w-20 h-20" />
+            <div class="p-8 text-center">
+              <div class="mb-2 flex items-center justify-center h-24">  
+                <img src="./assets/aviator-icons/dom.png" alt="Interactive Control" class="w-20 h-20 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">Interactive DOM Control</h3>
               <p class="text-gray-600 leading-relaxed">
@@ -281,9 +277,9 @@
             </div>
 
             <!-- Feature 3: Knowledge-Driven Responses -->
-            <div class="bg-gradient-to-br from-yellow-50/50 to-[#fff0db]/50 border border-yellow-100/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center">
-                <img src="./assets/dev-assets/icons/brain.svg" alt="Knowledge-Driven" class="w-20 h-20" />
+            <div class="p-8 text-center">
+              <div class="mb-2 flex items-center justify-center h-24">
+                <img src="./assets/aviator-icons/brain.png" alt="Knowledge-Driven" class="w-20 h-20 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">Knowledge-Driven Responses</h3>
               <p class="text-gray-600 leading-relaxed">
@@ -292,9 +288,9 @@
             </div>
 
             <!-- Feature 4: Scalable Demo Delivery -->
-            <div class="bg-gradient-to-br from-yellow-50/50 to-[#fff0db]/50 border border-yellow-100/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center">
-                <img src="./assets/dev-assets/icons/msg_ai_knowledge.svg" alt="Scalable Delivery" class="w-20 h-20" />
+            <div class="p-8 text-center">
+              <div class="mb-2 flex items-center justify-center h-24">
+                <img src="./assets/aviator-icons/message.png" alt="Scalable Delivery" class="w-20 h-20 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">Scalable Demo Delivery</h3>
               <p class="text-gray-600 leading-relaxed">
@@ -303,9 +299,9 @@
             </div>
 
             <!-- Feature 5: Sales Workflow Integration -->
-            <div class="bg-gradient-to-br from-yellow-50/50 to-[#fff0db]/50 border border-yellow-100/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center">
-                <img src="./assets/dev-assets/icons/trust_lock.svg" alt="Sales Integration" class="w-20 h-20" />
+            <div class="p-8 text-center">
+              <div class="mb-2 flex items-center justify-center h-24">
+                <img src="./assets/aviator-icons/puzzle.png" alt="Sales Integration" class="w-24 h-24 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">Sales Workflow Integration</h3>
               <p class="text-gray-600 leading-relaxed">
@@ -314,9 +310,9 @@
             </div>
 
             <!-- Feature 6: Demo Analytics -->
-            <div class="bg-gradient-to-br from-yellow-50/50 to-[#fff0db]/50 border border-yellow-100/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-              <div class="w-16 h-16 mx-auto mb-6 rounded-lg flex items-center justify-center">
-                <img src="./assets/dev-assets/icons/page_analytics.svg" alt="Demo Analytics" class="w-20 h-20" />
+            <div class="p-8 text-center">
+              <div class="mb-2 flex items-center justify-center h-24">
+                <img src="./assets/aviator-icons/analytics.png" alt="Demo Analytics" class="w-20 h-20 object-contain" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 mb-4">Demo Analytics</h3>
               <p class="text-gray-600 leading-relaxed">
@@ -327,8 +323,9 @@
         </div>
       </section>
       <!-- ================= End Features Section ================= -->
-       <!-- ================= FAQ Section ================= -->
-       <section class="w-full min-h-[60vh] py-16">
+      
+      <!-- FAQ Section -->
+      <section id="faq" class="relative w-full min-h-[60vh] py-16 bg-blue-100 z-10">
         <div class="max-w-4xl mx-auto px-4">
           <div class="text-center mb-12">
             <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -340,23 +337,47 @@
           </div>
           <div id="faq-root"></div>
         </div>
-       </section>
-       <!-- ================= End FAQ Section ================= -->
-     <!-- Footer -->
-    <footer class="w-full">
-      <div class="max-w-7xl mx-auto py-2 pt-4">
-        <div
-          class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8"
-        >
-          <!-- Company Info -->
-          <div class="flex items-center space-x-2">
-            <span
-              class="text-sm md:text-base lg:text-lg text-gray-800 font-medium"
-              >© 2025 Aviator</span
-            >
-            <div id="social-links-root"></div>
+      </section>
+      
+      <!-- Footer -->
+      <footer class="relative w-full bg-blue-100">
+        
+        <!-- Footer Content -->
+        <div class="relative z-10 max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+          <!-- Top Section: Logo and Brand -->
+          <div class="flex items-center justify-between mb-6">
+            <!-- Logo and Brand -->
+            <div class="flex items-center space-x-3">
+              <img 
+                src="./assets/aviator-logomark.svg" 
+                alt="Aviator Logo" 
+                class="w-8 h-8"
+              />
+              <div>
+                <div class="text-lg text-gray-800 font-medium">aviator</div>
+                <div class="text-sm text-gray-600">AI Avatar Product Demos</div>
+              </div>
+            </div>
+            
+            <!-- Social Links (Mobile: top row right, Desktop: moves to bottom) -->
+            <div class="flex items-center sm:hidden" id="social-links-mobile">
+            </div>
           </div>
-        </div>
+          
+          <!-- Separator Line -->
+          <div class="border-t border-gray-100 mb-6"></div>
+          
+          <!-- Bottom Section: Copyright and Social Links (Desktop only) -->
+          <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <!-- Social Links (Desktop: shows here, Mobile: hidden) -->
+            <div class="hidden sm:flex items-center" id="social-links-desktop">
+            </div>
+          
+            <!-- Copyright -->
+            <div class="text-sm text-gray-600">
+              2025 Aviator. All rights reserved.
+            </div>
+          </div>
       </div>
     </footer>
     <script type="application/ld+json">

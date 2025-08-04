@@ -10,5 +10,11 @@
       "elementId": "geo-root",
       "replacementFile": "index.html"
     }
-  ]
+  ],
+  "faqSchema": {
+    "enabled": true,
+    "sourceFile": "packages/landing/src/js/components/faq.json",
+    "targetHtml": "index.html",
+    "insertBeforeTag": "</head>"
+  }
 }

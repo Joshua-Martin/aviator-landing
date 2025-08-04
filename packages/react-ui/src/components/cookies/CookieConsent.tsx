@@ -169,7 +169,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({
           </button>
           <button
             onClick={handleAccept}
-            className="text-xs py-1 px-3 bg-yellow-500 text-black rounded-md hover:bg-yellow-600 transition-colors"
+            className="text-xs py-1 px-3 bg-blue-200 text-black rounded-md hover:bg-blue-300 transition-colors"
           >
             Accept
           </button>

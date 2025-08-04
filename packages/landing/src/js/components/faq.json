@@ -1,18 +1,26 @@
 [
   {
-    "question": "What is Aviator and how does it work?",
-    "answer": "Aviator is an AI avatar that delivers live, interactive product demos directly on your website. Prospects can see your product in action and interact with the demo instantly, without needing to schedule a call or install anything. Aviator is always available, scales to any volume, and integrates seamlessly with your sales process."
+    "question": "What is Aviator?",
+    "answer": "Aviator is an AI avatar that embeds on your website to deliver live, interactive product demos 24/7. Instead of static videos or scheduling calls, prospects can click and explore your actual product interface while Aviator explains features, answers questions, and guides them through real use cases in real-time."
   },
   {
-    "question": "How does Aviator deliver interactive product demos?",
-    "answer": "Aviator embeds into landing pages, onboarding flows, or product tours, allowing visitors to start a demo instantly. It controls a captured version of your product’s interface, demonstrating features and workflows in real time. Unlike static videos, every step is personalized to the visitor."
+    "question": "How is this different from demo videos or screen recordings?",
+    "answer": "Unlike static videos, Aviator is like having an infinitely scalable sales rep. The AI avatar gives personalized demos that match exactly how each prospect would use your product, even customizing mock data to reflect their industry. Aviator asks qualifying questions, adapts the demo in real-time, and captures everything for your sales team. The real value: prospects get a high-quality, personalized demo instantly when they're most interested, giving you a competitive edge by being first to show your product."
   },
   {
-    "question": "What are the benefits of using Aviator for sales teams?",
-    "answer": "Aviator enables teams to capture interest instantly, deliver thousands of demos simultaneously, and reduce the cost per demo. Every demo follows your sales playbook, ensuring consistent messaging and highlighting the features that convert best for your team."
+    "question": "How quickly can we get Aviator set up?",
+    "answer": "You can be up and running in as little as a few hours! It's completely self-serve: sign up, use our browser extension to capture your web app, and record yourself giving a demo (with mic on) so the AI learns your presentation style. Then edit the captured demo to your liking and deploy it anywhere with a simple script tag. Setup time depends on your product's complexity, but most teams can be live within a day."
   },
   {
-    "question": "How does Aviator ensure demo security and data privacy?",
-    "answer": "Aviator runs demos in a controlled environment where you define exactly what prospects see, protecting sensitive data while keeping the experience realistic. It also integrates with your sales workflow to capture leads, update your CRM, and notify your team securely."
+    "question": "What kind of results should we expect?",
+    "answer": "You can expect to see 50% larger deals, 2x more deals, and 30% faster sales cycles with interactive demos compared to your current demo process."
+  },
+  {
+    "question": "How does Aviator integrate with our sales process?",
+    "answer": "Aviator connects with popular CRMs (Salesforce, HubSpot), scheduling tools (Calendly), and communication platforms (Slack). All prospect interactions flow directly into your existing workflow, and your sales team gets rich context about what each prospect explored before follow-up calls."
+  },
+  {
+    "question": "Is our product data secure?",
+    "answer": "Yes. Aviator uses controlled demo environments, not your live product. You decide exactly what prospects can see and interact with, ensuring sensitive data and features remain protected while keeping the experience realistic. We're also SOC 2 ready for enterprise compliance requirements."
   }
 ]

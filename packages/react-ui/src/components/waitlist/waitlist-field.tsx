@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { AviatorButton } from '../custom/aviator-button';
 import { useWaitlist } from '../../hooks/useWaitlist';
 import { Check, Loader2 } from 'lucide-react';
 import { cn } from '../../lib/utils';
@@ -156,10 +155,18 @@ export const WaitlistField: React.FC<WaitlistFieldProps> = ({ onSubmit }) => {
                   disabled={loading}
                 />
                 <div className="pr-1 py-1 relative flex items-center justify-center">
-                  <AviatorButton
+                  <button
                     type="submit"
-                    rounded="rounded-md"
-                    className="px-2 md:px-4 md:py-2 py-1 flex items-center justify-center"
+                    className={cn(
+                      "px-2 md:px-4 md:py-2 py-1 flex items-center justify-center rounded-md",
+                      "bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-medium",
+                      "hover:bg-gradient-to-r hover:from-blue-700 hover:to-indigo-600",
+                      "active:bg-gradient-to-r active:from-blue-800 active:to-indigo-700",
+                      "transition-all duration-150 ease-in-out",
+                      "shadow-md hover:shadow-lg hover:-translate-y-0.5",
+                      "disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none",
+                      "focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    )}
                     disabled={loading}
                   >
                     {loading ? (
@@ -167,7 +174,7 @@ export const WaitlistField: React.FC<WaitlistFieldProps> = ({ onSubmit }) => {
                     ) : (
                       <span className="text-sm md:text-base font-medium">Join Waitlist</span>
                     )}
-                  </AviatorButton>
+                  </button>
                   {/* Decorative stars centered above the button */}
                 </div>
               </>

@@ -1,3 +1,9 @@
 {
-  "links": []
+  "links": [ {
+    "label": "Features",
+    "href": "#features"
+  }, {
+    "label": "FAQ",
+    "href": "#faq"
+  }]
 }

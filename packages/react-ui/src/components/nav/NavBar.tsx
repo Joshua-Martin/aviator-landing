@@ -69,7 +69,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
         <div className="flex items-center">
           <a
             href={item.href}
-            className="px-3 py-4 lg:py-2 text-base font-medium text-aviator-black hover:text-da-green-500 transition-colors"
+            className="px-3 py-4 lg:py-2 text-base font-medium text-aviator-black hover:text-blue-500 transition-colors"
           >
             {item.label}
           </a>
@@ -86,7 +86,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
                 setActiveDropdown(isActive ? null : item.label);
               }
             }}
-            className="flex items-center px-3 py-4 lg:py-2 text-base font-medium text-aviator-black hover:text-da-green-500 transition-colors"
+            className="flex items-center px-3 py-4 lg:py-2 text-base font-medium text-aviator-black hover:text-blue-500 transition-colors"
           >
             {item.label}
             {hasDropdown && (
@@ -114,7 +114,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
               opacity: hasDropdown && isActive ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
-            className="absolute bottom-0 h-[2px] rounded-full w-full bg-da-green-500 origin-left hidden lg:block "
+            className="absolute bottom-0 h-[2px] rounded-full w-full bg-blue-500 origin-left hidden lg:block "
           />
         </div>
 
@@ -160,7 +160,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
                 <a
                   key={subLink.href}
                   href={subLink.href}
-                  className="block pl-8 py-4 text-aviator-black hover:text-da-green-500"
+                  className="block pl-8 py-4 text-aviator-black hover:text-blue-500"
                 >
                   <div className="flex items-center">
                     <p className="text-base">{subLink.label}</p>
@@ -180,11 +180,11 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
   return (
     <div>
       <div className="w-screen px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-100 shadow-sm">
-        <div className="flex h-16 items-center justify-between max-w-[80rem] mx-auto">
+        <div className="flex h-16 items-center justify-between max-w-[90rem] mx-auto">
           {/* Logo */}
           <div className="flex-shrink-0">
             <a className="flex items-center gap-2" href="/">
-            <AviatorLogoIcon  size={18}/>
+            <AviatorLogoIcon  size={20} className='mt-1'/>
               <span className="text-aviator-black font-[900] text-2xl font-michroma">aviator</span>
             </a>
           </div>
@@ -222,7 +222,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
           <div className="flex lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-100/50 hover:text-da-green-500/90 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-blue-500/90 focus:outline-none"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -262,7 +262,7 @@ const NavBar: React.FC<NavBarProps> = ({ items }) => {
                   <AviatorButton
                     asLink={true}
                     href={item.href}
-                    className="group relative overflow-hidden px-8 py-3 text-center font-bold transition-all hover:bg-da-green-500/90 w-full block text-lg"
+                    className="group relative overflow-hidden px-8 py-3 text-center font-bold transition-all hover:bg-blue-500/90 w-full block text-lg"
                     rounded="rounded-lg"
                   >
                     <span className="relative z-10 flex items-center justify-center space-x-3">

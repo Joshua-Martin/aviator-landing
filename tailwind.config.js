@@ -5,6 +5,9 @@ module.exports = {
     './packages/react-ui/*.html',
     './packages/landing/src/**/*.{html,css}',
   ],
+  safelist: [
+    'video-background'
+  ],
   darkMode: 'class',
   theme: {
     fontFamily: {
