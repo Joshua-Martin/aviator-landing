@@ -18,12 +18,8 @@ interface DemoVideo {
   portraitSrc: string;
   /** Optional poster/thumbnail */
   poster?: string;
-  /** Logo */
-  logo: string;
   /** Demo category */
   category: 'dev-tools' | 'sales-software';
-  /** Button label for tab */
-  buttonLabel: string;
   /** Hero title text */
   heroTitle: string;
 }
@@ -79,8 +75,6 @@ export const VideoDemo: React.FC = () => {
         id: 'cursor',
         name: 'Cursor',
         category: 'dev-tools',
-        buttonLabel: 'Demos for Dev Tools',
-        logo: './assets/videos/demo-logos/cursor.png',
         landscapeSrc: './assets/videos/16-9/Cursor-Demo-Landscape-1080p-24fps.mp4',
         portraitSrc: './assets/videos/9-16/Cursor-Demo-portrait-1080p-30fps.mp4',
         heroTitle: 'Watch Aviator Autonomously Demo the Cursor IDE'
@@ -89,8 +83,6 @@ export const VideoDemo: React.FC = () => {
         id: 'hubspot',
         name: 'HubSpot',
         category: 'sales-software',
-        buttonLabel: 'Sales Software Demos',
-        logo: './assets/videos/demo-logos/hubspot.png',
         landscapeSrc: './assets/videos/16-9/Hubspot-Demo-Landscape-1080p-30fps.mp4',
         portraitSrc: './assets/videos/9-16/Hubspot-Demo-Portrait-1080p-30fps.mp4',
         heroTitle: 'Experience Aviator\'s Sales Software Demo Magic'

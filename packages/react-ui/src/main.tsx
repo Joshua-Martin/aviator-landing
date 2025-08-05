@@ -40,7 +40,7 @@ if (integrationScrollRoot) {
 }
 
 if (heroVideoRoot) {
-  createRoot(heroVideoRoot).render(<HeroVideo src="./assets/aviator-waitlist-video.mp4" />);
+  createRoot(heroVideoRoot).render(<HeroVideo />);
 }
 
 if (socialLinksMobileRoot) {
