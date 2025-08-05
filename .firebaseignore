@@ -1,0 +1,9 @@
+# Ignore everything …
+**
+
+# … except the files you actually want to deploy
+!dist/**
+!.firebaseignore   # keep the ignore file itself (optional)
+
+# Explicitly ignore the .cursor folder no matter where it lives
+.cursor/**
